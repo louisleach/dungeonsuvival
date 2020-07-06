@@ -657,6 +657,7 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sp
     tiles.setTileAt(location, sprites.dungeon.chestOpen)
     effects.bubbles.startScreenEffect(100)
     info.changeLifeBy(3)
+    info.changeScoreBy(17)
     DoubleShot = "yes"
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.monster, function (sprite, otherSprite) {
