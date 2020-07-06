@@ -449,6 +449,26 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 . . . . . . . 2 . 2 . . . . . . 
 . . . . . . . . . 2 . . . . . . 
 `, hero, 0, -200)
+        if (DoubleShot == "yes") {
+            projectile = sprites.createProjectileFromSprite(img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . 2 . . . . . . . . 
+. . . 2 . . 2 . . . . . . . . . 
+. . . . . . . . . 2 . . . . . . 
+. . . 2 . 5 . 2 . 5 . . . . . . 
+. . . 5 . 4 . 2 4 2 . . . . . . 
+. . . 4 2 5 . c 4 5 . . . . . . 
+. . . 4 c a 2 a 5 5 . . . . . . 
+. . . c 5 f a b 5 c . . . . . . 
+. . . b 4 2 5 4 2 a . . . . . . 
+. . . 2 b a 2 f 2 a . . . . . . 
+. . . c 2 5 2 b a c . . . . . . 
+. . . . 4 a f 4 c 2 . . . . . . 
+. . . . . b b c 2 . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`, hero, 0, 200)
+        }
     } else if (direction == "down") {
         projectile = sprites.createProjectileFromSprite(img`
 . . . . . . . . . . . . . . . . 
@@ -468,6 +488,26 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 `, hero, 0, 200)
+        if (DoubleShot == "yes") {
+            projectile = sprites.createProjectileFromSprite(img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . 2 . . . . . . . . 
+. . . 2 . . 2 . . . . . . . . . 
+. . . . . . . . . 2 . . . . . . 
+. . . 2 . 5 . 2 . 5 . . . . . . 
+. . . 5 . 4 . 2 4 2 . . . . . . 
+. . . 4 2 5 . c 4 5 . . . . . . 
+. . . 4 c a 2 a 5 5 . . . . . . 
+. . . c 5 f a b 5 c . . . . . . 
+. . . b 4 2 5 4 2 a . . . . . . 
+. . . 2 b a 2 f 2 a . . . . . . 
+. . . c 2 5 2 b a c . . . . . . 
+. . . . 4 a f 4 c 2 . . . . . . 
+. . . . . b b c 2 . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`, hero, 0, 200)
+        }
     } else if (direction == "left") {
         projectile = sprites.createProjectileFromSprite(img`
 . . . . . . . . . . . . . . . . 
@@ -487,6 +527,26 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 `, hero, -200, 0)
+        if (DoubleShot == "yes") {
+            projectile = sprites.createProjectileFromSprite(img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . 2 . . . . . . . . . . 
+. . . . . . . . 2 c . . . . . . 
+. 2 . 5 2 4 c a 4 5 c . . . . . 
+. . . . . c c 2 a b 2 c . . . . 
+. . 4 2 4 b 4 f 4 4 a 5 . . . . 
+. . . . 2 2 b 4 2 f 2 a . . . . 
+. . 5 . . c 5 5 b b 5 c . . . . 
+. 2 . . 2 4 2 a 4 5 c . . . . . 
+. . . . . . . 4 b c . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`, hero, 200, 0)
+        }
     } else if (direction == "right") {
         projectile = sprites.createProjectileFromSprite(img`
 . . . . . . . . . . . . . . . . 
@@ -506,7 +566,28 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 `, hero, 200, 0)
+        if (DoubleShot == "yes") {
+            projectile = sprites.createProjectileFromSprite(img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . c . . 5 . . 5 . . 
+. . . . c 4 2 a c 4 . . . . . . 
+. . . c 5 f a 5 5 c 4 2 4 . . . 
+. . . b 2 f 2 f a a . 5 . 5 . 2 
+. . . 5 b 4 b 4 2 a . . . . . . 
+. . . c 2 f 5 b a c 2 2 . 5 . . 
+. . . . b 4 f 2 c 4 . . 5 . 4 . 
+. . . . . b b c 4 2 5 4 . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`, hero, -200, 0)
+        }
     }
+    pause(100)
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     direction = "right"
@@ -571,6 +652,8 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sprite, location) {
     tiles.setTileAt(location, sprites.dungeon.chestOpen)
     effects.bubbles.startScreenEffect(100)
+    info.changeLifeBy(3)
+    DoubleShot = "yes"
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.monster, function (sprite, otherSprite) {
     info.changeLifeBy(-1)
@@ -657,6 +740,7 @@ let projectile: Sprite = null
 let anim: animation.Animation = null
 let monster_1: Sprite = null
 let direction = ""
+let DoubleShot = ""
 let hero: Sprite = null
 scene.setBackgroundColor(15)
 tiles.setTilemap(tiles.createTilemap(
@@ -726,6 +810,7 @@ hero = sprites.create(img`
 . . . . . f f f f f f . . . . . 
 . . . . . f f . . f f . . . . . 
 `, SpriteKind.Player)
+DoubleShot = "no"
 direction = "down"
 let EnemyCounter = 20
 controller.moveSprite(hero, 100, 100)
