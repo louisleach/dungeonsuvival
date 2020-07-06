@@ -450,6 +450,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 . . . . . . . . . 2 . . . . . . 
 `, hero, 0, -200)
         if (DoubleShot == "yes") {
+            pause(100)
             projectile = sprites.createProjectileFromSprite(img`
 . . . . . . . . . . . . . . . . 
 . . . . . . . 2 . . . . . . . . 
@@ -489,24 +490,25 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 . . . . . . . . . . . . . . . . 
 `, hero, 0, 200)
         if (DoubleShot == "yes") {
+            pause(100)
             projectile = sprites.createProjectileFromSprite(img`
 . . . . . . . . . . . . . . . . 
-. . . . . . . 2 . . . . . . . . 
-. . . 2 . . 2 . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . c . . . . . . . 
+. . . . . c a a a c . . . . . . 
+. . . . 5 c 2 a b 2 c . . . . . 
+. . . . b f f b f a 5 . . . . . 
+. . . . 4 b a 2 f 5 a . . . . . 
+. . . . 4 b f b b a c . . . . . 
+. . . . 4 c a 2 c c 5 . . . . . 
+. . . . 2 4 2 2 c 5 2 . . . . . 
+. . . . 4 c 5 4 5 c 2 . . . . . 
+. . . . 2 c 4 c 5 4 5 . . . . . 
+. . . . 4 4 . 4 . 2 . . . . . . 
+. . . . . . . 2 . 2 . . . . . . 
 . . . . . . . . . 2 . . . . . . 
-. . . 2 . 5 . 2 . 5 . . . . . . 
-. . . 5 . 4 . 2 4 2 . . . . . . 
-. . . 4 2 5 . c 4 5 . . . . . . 
-. . . 4 c a 2 a 5 5 . . . . . . 
-. . . c 5 f a b 5 c . . . . . . 
-. . . b 4 2 5 4 2 a . . . . . . 
-. . . 2 b a 2 f 2 a . . . . . . 
-. . . c 2 5 2 b a c . . . . . . 
-. . . . 4 a f 4 c 2 . . . . . . 
-. . . . . b b c 2 . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-`, hero, 0, 200)
+`, hero, 0, -200)
         }
     } else if (direction == "left") {
         projectile = sprites.createProjectileFromSprite(img`
@@ -528,6 +530,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 . . . . . . . . . . . . . . . . 
 `, hero, -200, 0)
         if (DoubleShot == "yes") {
+            pause(100)
             projectile = sprites.createProjectileFromSprite(img`
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
@@ -567,6 +570,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 . . . . . . . . . . . . . . . . 
 `, hero, 200, 0)
         if (DoubleShot == "yes") {
+            pause(100)
             projectile = sprites.createProjectileFromSprite(img`
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
