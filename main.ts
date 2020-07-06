@@ -659,6 +659,7 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sp
     info.changeLifeBy(3)
     info.changeScoreBy(17)
     DoubleShot = "yes"
+    music.powerUp.play()
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.monster, function (sprite, otherSprite) {
     info.changeLifeBy(-1)
