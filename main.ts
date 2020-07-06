@@ -663,6 +663,7 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sp
 sprites.onOverlap(SpriteKind.Player, SpriteKind.monster, function (sprite, otherSprite) {
     info.changeLifeBy(-1)
     otherSprite.destroy(effects.ashes, 100)
+    EnemyCounter += -1
 })
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     direction = "up"
@@ -832,4 +833,5 @@ game.onUpdate(function () {
         }
         EnemyCounter += 21
     }
+    console.log(EnemyCounter)
 })
